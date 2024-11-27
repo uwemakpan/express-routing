@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Contact Us
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+      section {
+        padding: 20px;
+        margin: 10px auto;
+        max-width: 600px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      input,
+      textarea {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type='submit'] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+      }
+      input[type='submit']:hover {
+        background-color: #45a049;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+  body
+    header
+      h1 Contact Us
+    section
+      h2 We'd love to hear from you!
+      form(action="/submit_form", method="POST")
+        label(for="name") Your Name:
+        input(type="text", id="name", name="name", required, placeholder="Enter your name")
+
+        label(for="email") Your Email:
+        input(type="email", id="email", name="email", required, placeholder="Enter your email")
+
+        label(for="subject") Subject:
+        input(type="text", id="subject", name="subject", required, placeholder="Enter the subject")
+
+        label(for="message") Your Message:
+        textarea(id="message", name="message", rows="4", required, placeholder="Enter your message")
+
+        input(type="submit", value="Submit")
+    footer
+      p &copy; 2024 Your Company. All rights reserved.
